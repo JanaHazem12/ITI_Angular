@@ -9,6 +9,10 @@
     margin:auto;
 }
 
+.skillsClass{
+    margin-top: 10px;
+}
+
 #skillsDiv{
     width: 100%;
     height: 820px;
@@ -21,15 +25,24 @@
     color:#cb8aee;
 }
 
-#skillsProgressBars{
-    margin-top: 40px;
-    margin-left: 650px;
+#mainContainer{
     width: 100%;
-    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+#container2{
+    width: 40%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-content: center;
 }
 
 #skill1outer{
-    width: 30%;
     height: 50px;
     background-color: rgba(130, 130, 130, 0.314);
 }
@@ -40,10 +53,17 @@
     background-color: rgb(124, 52, 192);
 }
 
+#skill1txt{
+    font-size: 30px;
+    position: absolute;
+    left: 1315px;
+    margin-top: 7px;
+    color: #813ca6;
+}
+
 #skill2outer{
-    width: 30%;
+    width: 100%;
     height: 50px;
-    margin-top: 50px;
     background-color: rgba(130, 130, 130, 0.314);
 }
 
@@ -53,26 +73,17 @@
     background-color: rgb(124, 52, 192);
 }
 
-#skill1txt{
-    font-size: 30px;
-    position: absolute;
-    left: 925px;
-    margin-top: 7px;
-    color: #813ca6;
-}
-
 #skill2txt{
     font-size: 30px;
     position: absolute;
-    left: 1010px;
+    left: 1450px;
     margin-top: 8px;
     color: #813ca6;
 }
 
 #skill3outer{
-    width: 30%;
+    width: 100%;
     height: 50px;
-    margin-top: 50px;
     background-color: rgba(130, 130, 130, 0.314);
 }
 
@@ -85,15 +96,14 @@
 #skill3txt{
     font-size: 30px;
     position: absolute;
-    left: 970px;
+    left: 1382px;
     margin-top: 8px;
     color: #813ca6;
 }
 
 #skill4outer{
-    width: 30%;
+    width: 100%;
     height: 50px;
-    margin-top: 50px;
     background-color: rgba(130, 130, 130, 0.314);
 }
 
@@ -106,15 +116,14 @@
 #skill4txt{
     font-size: 30px;
     position: absolute;
-    left: 1010px;
+    left: 1495px;
     margin-top: 7px;
     color: rgb(195, 195, 196);
 }
 
 #skill5outer{
-    width: 30%;
+    width: 100%;
     height: 50px;
-    margin-top: 50px;
     background-color: rgba(130, 130, 130, 0.314);
 }
 
@@ -127,15 +136,14 @@
 #skill5txt{
     font-size: 30px;
     position: absolute;
-    left: 840px;
+    left: 1180px;
     margin-top: 7px;
     color: #813ca6;
 }
 
 #skill6outer{
-    width: 30%;
+    width: 100%;
     height: 50px;
-    margin-top: 50px;
     background-color: rgba(130, 130, 130, 0.314);
 }
 
@@ -148,16 +156,17 @@
 #skill6txt{
     font-size: 30px;
     position: absolute;
-    left: 1026px;
+    left: 1515px;
     margin-top: 7px;
-    color: rgb(195, 195, 196);
+    color: #813ca6;
 }
 
-#skills{
+#container1{
     width: 40%;
-    height: 550px;
-    position: absolute;
-    margin-top: 40px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #TimeManagement{
@@ -165,16 +174,7 @@
     height: 50px;
     color: #813ca6;
     font-size: 50px;
-    position: absolute;
     text-align: right;
-    /* background-color: red; */
-}
-
-#TMtxt{
-    width: 90%;
-    position: absolute;
-    bottom: 0px;
-    left: 102px;
 }
 
 #Communication{
@@ -182,16 +182,7 @@
     height: 50px;
     color: #813ca6;
     font-size: 50px;
-    position: absolute;
-    top: 100px;
     text-align: right;
-}
-
-#Commtxt{
-    width: 90%;
-    position: absolute;
-    bottom: 0px;
-    left: 106px;
 }
 
 #Teamwork{
@@ -199,16 +190,7 @@
     height: 50px;
     color: #813ca6;
     font-size: 50px;
-    position: absolute;
-    top: 200px;
     text-align: right;
-}
-
-#TWtxt{
-    width: 90%;
-    position: absolute;
-    bottom: 0px;
-    left: 107px; 
 }
 
 #MeetingDeadlines{
@@ -216,16 +198,7 @@
     height: 50px;
     color: #813ca6;
     font-size: 50px;
-    position: absolute;
-    top: 300px;
     text-align: right;
-}
-
-#MDtxt{
-    width: 90%;
-    position: absolute;
-    bottom: 0px;
-    left: 105px; 
 }
 
 #Adaptability{
@@ -233,16 +206,7 @@
     height: 50px;
     color: #813ca6;
     font-size: 50px;
-    position: absolute;
-    top: 400px;
     text-align: right;
-}
-
-#Atxt{
-    width: 90%;
-    position: absolute;
-    bottom: 0px;
-    left: 106px; 
 }
 
 #Resilience{
@@ -250,14 +214,5 @@
     height: 50px;
     color: #813ca6;
     font-size: 50px;
-    position: absolute;
-    top: 500px;
     text-align: right;
-}
-
-#Rtxt{
-    width: 90%;
-    position: absolute;
-    bottom: 0px;
-    left: 106px; 
 }

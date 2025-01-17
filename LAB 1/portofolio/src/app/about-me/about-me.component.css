@@ -1,43 +1,23 @@
-#bigDiv{
-    width: 100%;
-    height: 100%;
-    padding-top: 30rem;
-    /* background-image: url("https://img.freepik.com/free-photo/digital-camera-keyboard-felt-tip-pens-stationery-pink-background_23-2147880688.jpg?semt=ais_hybrid"); */
-    background-image: url('https://www.arkasoftwares.com/blog/wp-content/uploads/2018/11/header_banner.jpg');
-    background-size: cover;
-    /* border: 5px solid red; */
-}
-
-#name{
-    color:rgb(64, 4, 81);
-    position: absolute;
-    bottom: 470px;
-    left: 150px;
-    /* font-family: jobTitleFont; */
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 50px;
-}
-
-#jobTitle{
-    color:rgb(64, 4, 81);
-    position: absolute;
-    bottom: 465px;
-    left: 210px;
-    font-size: 15px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+#portofolioDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 400px;
 }
 
 #AboutMeDiv{
-    width: 25%;
-    height: 50%;
+    width: 100%;
+    height: 30%;
     /* border: 5px solid red; */
+    margin-left: 60px;
+    margin-top: 50px;
 }
 #aboutMe{
     font-family: jobTitleFont;
     font-size: 60px;
     color: rgb(148, 15, 148);
-    margin-top: 100px;
-    margin-left: 50px;
+    /* margin-top: 100px;
+    margin-left: 50px; */
     background: -webkit-linear-gradient(purple, #cb8aee);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -45,25 +25,25 @@
 }
 
 #BioDiv{
-    /* border: 5px solid green; */
-    margin-left: 400px;
+    width: 70%;
+    height: 40%;
     position: absolute;
-    bottom: 80px;
+    margin-left: 400px;
+    margin-top: 10px;
 }
 
 #bioPar{
     color: #cb8aee;
-    font-size: larger;
+    font-size: 25px;
     line-height: 150%;
     line-break:strict;
 }
 
 #downloadCV{
-    width: 10%;
-    height: 100%;
-    /* border: 5px solid green; */
-    margin-left: 400px;
-    margin-top: 50px;
+    width: 20%;
+    position: absolute;
+    margin-left: 260px;
+    margin-top: 300px;
 }
 
 #ButtCV{
@@ -73,7 +53,7 @@
     background-color: #cb8aee;
     border: 5px solid #cb8aee;
     border-radius: 25px;
-    font-size: 14px;
+    font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
 }
 
