@@ -1,0 +1,13 @@
+<!-- 1ST STEP -->
+ <!-- 2ND STEP - import user-card in user-list.ts -->
+ <div class="container my-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- LOOP OVER USERS OBJ. -->
+      @for(user of users ; track user.id){
+        <div class="col">
+          <!-- userInfo will be used in user-card HTML -->
+        <app-user-card [userInfo]="user"></app-user-card>
+      </div>
+      }
+    </div>
+  </div>

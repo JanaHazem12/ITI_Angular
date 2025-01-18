@@ -1,0 +1,32 @@
+<!-- use 'userInfo' that we defined in user-list HTML -->
+<div class="card h-100">
+  <img class="card-img-top" [src]="userInfo.image" alt="Card image cap">
+  <div class="card-title">
+   <span id="roleChips" class="badge badge-danger" [ngClass]="userInfo.role === 'admin' ? 'adminChip' : userInfo.role === 'moderator' ? 'moderatorChip' : 'userChip'">
+          {{ userInfo.role }}
+    </span>
+    <ul type="square" class="card-text">
+      <li><span class="spanClass">Username: </span> 
+      @for(username of userInfo.username ; track $index){
+          {{ username }}
+      }
+    </li>
+      <li><span class="spanClass">Email:</span> 
+      <span id="emailSpan">@for(email of userInfo.email ; track $index){
+          {{ email }}
+      }
+    </span>
+    </li>
+    <li><span class="spanClass">Phone Number:</span>
+      @for(phone of userInfo.phone ; track $index){
+          {{ phone }}
+      }
+    </li>
+    <li><span class="spanClass">Date of Birth:</span> 
+      @for(birthDate of userInfo.birthDate ; track $index){
+          {{ birthDate }}
+      }
+    </li>
+      </ul>
+  </div>
+</div>

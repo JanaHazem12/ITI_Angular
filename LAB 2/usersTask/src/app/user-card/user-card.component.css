@@ -1,0 +1,39 @@
+.card-text{
+    font-family:'Times New Roman', Times, serif;
+    text-align: left;
+    font-size: 20px;
+    line-height: 60px;
+}
+
+/* decreasing font-size of email cause it was too wide */
+#emailSpan{
+    font-size: 20px;
+}
+
+/* making properties in BOLD */
+.spanClass{
+    font-weight: 600;
+}
+
+/* ROLE CHIPS as titles */
+.card-title{
+    text-align: center;
+    font-size: 40px;
+}
+
+#roleChips{
+    width: 250px;
+    padding: 7px;
+}
+
+.adminChip{
+    background-color: rgb(221, 45, 14);
+}
+
+.userChip{
+    background-color: rgb(78, 126, 6);
+}
+
+.moderatorChip{
+    background: rgb(226, 175, 20);
+}
