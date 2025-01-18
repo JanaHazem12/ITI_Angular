@@ -5,27 +5,32 @@
    <span id="roleChips" class="badge badge-danger" [ngClass]="userInfo.role === 'admin' ? 'adminChip' : userInfo.role === 'moderator' ? 'moderatorChip' : 'userChip'">
           {{ userInfo.role }}
     </span>
+    <!-- [ngClass]="userInfo.role === 'admin' ? 'adminBullet' : userInfo.role === 'moderator' ? 'moderatorBullet' : 'userBullet'" -->
     <ul type="square" class="card-text">
-      <li><span class="spanClass">Username: </span> 
-      @for(username of userInfo.username ; track $index){
+      <li [ngClass]="userInfo.role === 'admin' ? 'adminBullet' : userInfo.role === 'moderator' ? 'moderatorBullet' : 'userBullet'"><span class="spanClass">Username:</span> 
+      <span>@for(username of userInfo.username ; track $index){
           {{ username }}
       }
+    </span>
     </li>
-      <li><span class="spanClass">Email:</span> 
+      <li [ngClass]="userInfo.role === 'admin' ? 'adminBullet' : userInfo.role === 'moderator' ? 'moderatorBullet' : 'userBullet'"><span class="spanClass">Email:</span> 
       <span id="emailSpan">@for(email of userInfo.email ; track $index){
           {{ email }}
       }
     </span>
     </li>
-    <li><span class="spanClass">Phone Number:</span>
+    <li [ngClass]="userInfo.role === 'admin' ? 'adminBullet' : userInfo.role === 'moderator' ? 'moderatorBullet' : 'userBullet'"><span><span class="spanClass">Phone Number:</span>
       @for(phone of userInfo.phone ; track $index){
           {{ phone }}
       }
+    </span>
     </li>
-    <li><span class="spanClass">Date of Birth:</span> 
+    <li [ngClass]="userInfo.role === 'admin' ? 'adminBullet' : userInfo.role === 'moderator' ? 'moderatorBullet' : 'userBullet'"><span><span class="spanClass">Date of Birth:
+    </span> 
       @for(birthDate of userInfo.birthDate ; track $index){
           {{ birthDate }}
       }
+    </span>
     </li>
       </ul>
   </div>

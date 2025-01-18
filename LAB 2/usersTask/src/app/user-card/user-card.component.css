@@ -37,3 +37,21 @@
 .moderatorChip{
     background: rgb(226, 175, 20);
 }
+
+/* change bullets according to ROLE */
+.adminBullet{
+    color: rgb(221, 45, 14);
+}
+
+.userBullet{
+    color: rgb(78, 126, 6);
+}
+
+.moderatorBullet{
+    color: rgb(226, 175, 20);
+}
+
+/* to only change bullet's color NOT the list item text */
+li span{
+    color: black;
+}
