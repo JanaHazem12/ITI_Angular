@@ -1,0 +1,11 @@
+<!-- <p>to-do-wrapper works!</p> -->
+
+ <div>
+    <div>
+    <app-to-do-form (addToParent)="itemsArrayMethod($event)">
+    </app-to-do-form>
+    </div>
+        <!-- creating a duplicate of the parent array for the child array -->
+        <app-to-do-list [itemsArrayChild] = "itemsArray" (deleteTask)="deleteItemParent($event)">
+        </app-to-do-list>
+ </div>

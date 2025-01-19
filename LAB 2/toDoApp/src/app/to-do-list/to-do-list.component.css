@@ -1,0 +1,65 @@
+#tdlDiv{
+    width: 100%;
+    height: 400px;
+    /* background-color: rgb(12, 155, 162); */
+    /* border: 5px solid yellow; */
+}
+
+#itemsDiv{
+    width: 100%;
+    margin-left: 400px;
+}
+
+#itemDiv{
+    width: 50%;
+    height: 100px;
+    background-color: rgb(129, 200, 200);
+    border: 3px solid rgb(129, 200, 200);
+    border-radius: 25px;
+    margin-top: 30px;
+    text-align: center;
+    padding-right: 600px;
+    padding-top: 30px;
+    font-size: 25px;
+    color: white;
+    position: relative;
+}
+
+#deleteButt{
+    /* position: absolute;
+    left: 1070px; */
+    width: 100%;
+    color: rgb(12, 155, 162);
+    font-weight: 500;
+}
+
+#delDiv{
+    width: 50%;
+    /* border: 3px solid yellow; */
+    margin-left: 650px;
+}
+
+#bothButt{
+    margin-top: -30px;
+    line-height: 45px;
+}
+
+#compButt{
+    /* position: absolute;
+    left: 1070px; */
+    width: 100%;
+    color: rgb(12, 155, 162);
+    font-weight: 500;
+}
+
+#compDiv{
+    width: 50%;
+    /* border: 3px solid yellow; */
+    margin-left: 650px;
+}
+
+#itemTxt{
+    width: 20%;
+    position: absolute;
+    bottom: 30px;
+}

@@ -1,0 +1,21 @@
+<div id="tdlDiv">
+    <br><br>
+        <div id="itemsDiv">
+        @for(item of itemsArrayChild ; track $index){
+            <div id="itemDiv">
+            <div id="bothButt">
+            <div id="delDiv"><input type="button" value="Delete" class="btn btn-light" id="deleteButt" (click)="deleteItem(item)"></div>
+            <div id="compDiv"><input type="button" value="Complete" class="btn btn-light" ID="compButt" (click)="completeItem(item)" ></div></div>
+                <div id="itemTxt">{{ item }}</div>
+            </div>
+        }
+        </div>
+</div>
+  
+
+
+<!-- delete from itemsArrayChild in to-do-list CHILD -->
+<!-- equate the itemsArrayChild w/ itemsArray in to-do-wrapper PARENT -->
+ <!-- from child to parent -->
+
+

@@ -1,0 +1,14 @@
+<div id="tdfDiv">
+    <div id="tdfDivtxt">To-Do App!</div>
+    <div id="tdfDivSmalltxt">Add New To-Do</div>
+    <div id="AddTaskDiv">
+        <div id="taskTxtDiv"><input type="text" id="taskTxt" placeholder="Enter new task" #userInput></div>
+        <div id="addButtonDiv"><input type="button" id="addButton" value="Add" (click)="addItem(userInput.value)"></div>
+        <!-- another way is to use  -->
+        <!-- <div id="taskTxtDiv"><input type="text" id="taskTxt" placeholder="Enter new task" [(ngModel)]=task></div> -->
+    </div>
+</div>
+
+<!-- addItem(userInput.value)
+**** we put #userInput (or any other name) in the opening tag of the textbox ****
+**** .value to get the user-input value **** -->
