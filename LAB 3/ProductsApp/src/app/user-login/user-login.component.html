@@ -1,0 +1,39 @@
+<div id="form"><div id="innerForm"><form #userForm="ngForm" (ngSubmit)="handleForm(userForm)">
+  <div id="loginTitle">Login</div>
+    <!-- EMAIL PART  -->
+  <div class="form-group">
+      <label for="emailID"></label>
+      <!-- pattern for email (for using regex) -->
+      <input type="email" class="form-control" id="emailID" name="userEmail" #userEmailRef="ngModel" ngModel required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Email address">
+        <!-- ERROR HANDLING FOR BOTH EMAIL & PASSWORD -->
+    </div>
+    <!-- CHECK ON REGEX FOR EMAIL -->
+    @if(userEmailRef.invalid && userEmailRef.touched){
+      @if(userEmailRef.errors?.['pattern']){
+        <small class="form-text">Please enter a correct email format !</small>
+      }
+      @else if(userEmailRef.errors?.['required']){
+      <small class="form-text">Required</small>
+    }
+    }
+    <!-- EMAIL PART  -->
+    <!-- PASSWORD PART  -->
+    <br><br>
+    <div class="form-group">
+      <label for="passwordID"></label>
+      <input type="password" class="form-control" id="passwordID" name="userPass" #userPassRef="ngModel" ngModel required placeholder="Password">
+    </div>
+    <!-- SHOW VALIDATIONS AND ERRORS ON SUBMIT ???????????????? --> 
+    @if(userPassRef.invalid && userPassRef.touched){
+      <small class="form-text">Required</small>
+    }
+    <!-- PASSWORD PART  -->
+    <br><br>
+    <button type="submit" class="btn btn-primary" [disabled]="userEmailRef.invalid || userPassRef.invalid">Login</button>
+    <!-- <br> -->
+    <div id="smallTXTdiv"><span>Don't have an account ? </span>
+    <span><a routerLink="/register">Register</a></span></div>
+ 
+  </form>
+</div>
+</div>

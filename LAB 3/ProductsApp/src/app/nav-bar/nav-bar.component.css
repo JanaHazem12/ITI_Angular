@@ -1,0 +1,22 @@
+.active-link{
+    color: rgb(17, 106, 22);
+    font-weight: 500;
+}
+
+.navbar-brand{
+    font-size: 30px;
+    margin-left: 30px;
+}
+
+#register{
+    margin-left: 1400px;
+}
+
+.nav-item{
+    font-size: 25px;
+}
+
+/* #svgIcon{
+    size: 10px;
+} */
+

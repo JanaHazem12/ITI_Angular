@@ -1,0 +1,79 @@
+#shoppingCart{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    padding-top: 30px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#rowDiv{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    gap: 430px;
+    margin-left: 20px;
+    /* justify-content: space-evenly; */
+}
+
+.d-flex{
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 3px solid rgba(211, 211, 211, 0.544);
+    height: 70px;
+    border-radius: 7px;
+    font-size: 25px;
+}
+
+.btn:hover{
+    background-color: rgba(81, 185, 81, 0.627);
+}
+
+.removeBtn{
+    background-color: brown;
+    color: white;
+    width: 3%;
+    height: 50px;
+    border: 3px solid brown;
+    border-radius: 7px;
+}
+
+.removeBtn:hover{
+    background-color: white;
+    color: brown;
+}
+
+#flexRow{
+    display: flex;
+    flex-direction: row;
+    gap: 445px;
+    /* border: 3px solid red; */
+    /* justify-content: space-around; */
+}
+
+#description{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+hr{
+    width: 95%;
+    margin: 0 auto;
+}
+
+#thumbnailID{
+    width: 5%;
+}
+
+.totalDiv{
+    font-size: 40px;
+}
+
+#emptyCartTXT{
+    font-size: 60px;
+    text-align: center;
+    padding: 200px;
+    color: red;
+}

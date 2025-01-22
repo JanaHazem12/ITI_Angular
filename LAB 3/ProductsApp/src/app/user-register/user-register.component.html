@@ -1,0 +1,80 @@
+<div id="form"><div id="innerForm"><form [formGroup]="userForm" (ngSubmit)="handleLoginForm()">
+    <div id="registerTitle">Register</div>
+    <div class="form-group">
+        <label for="nameID"></label>
+        <input type="text" class="form-control" id="nameID" formControlName="userName" placeholder="Name">
+    </div>
+    @if(formControls['userName'].invalid &&formControls['userName'].touched){
+        @if(formControls['userName'].hasError('required')){
+            <div class="required"><small id="required1" class="form-text">Required</small></div>
+        }   
+    }
+    <div class="form-group">
+        <label for="emailID"></label>
+        <input type="email" class="form-control" id="emailID" formControlName="email" placeholder="Email Address">
+    </div>
+    @if(formControls['email'].invalid &&formControls['email'].touched){
+        @if(formControls['email'].hasError('required')){
+            <small class="form-text">Required</small>
+        }
+        @if(formControls['email'].hasError('email')){
+            <small class="form-text">Please enter a correct email format !</small>
+            }      
+    }
+    <!-- <small class="form-text text-muted">Please enter a correct email format !</small> -->
+    <div class="form-group">
+        <label for="UsernameID"></label>
+        <!-- pattern="^\S*$"
+            ^: Matches the start of the string.
+            \S: Matches any non-whitespace character (letters, numbers, special characters, etc.).
+            It does not include spaces, tabs, or newlines.
+            *: Matches zero or more occurrences of non-whitespace characters.
+            This allows empty strings or strings without any spaces.
+            $: Matches the end of the string. -->
+        <input type="text" class="form-control" id="UsernameID" formControlName="userUsername" pattern="^\S*$" placeholder="Username">
+    </div>
+    @if(formControls['userUsername'].invalid &&formControls['userUsername'].touched){
+        @if(formControls['userUsername'].hasError('required')){
+            <small class="form-text">Required</small>
+        }
+        @else if(formControls['userUsername'].hasError('pattern')){
+            <small class="form-text">Please enter a username with no spaces !</small>
+            }      
+    }
+    <!-- <br><br> -->
+    <div class="form-group">
+        <label for="passwordID"></label>
+        <input type="password" class="form-control" id="password" formControlName="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{1,}$" placeholder="Password">
+    </div>
+    @if(formControls['password'].invalid &&formControls['password'].touched){
+        @if(formControls['password'].hasError('required')){
+            <small class="form-text">Required</small>
+        }
+        @else if(formControls['password'].hasError('minlength')){
+            <small class="form-text">Invalid password, minimum length: 8 characters</small>
+        }
+        @else if(formControls['password'].hasError('pattern')){
+            <small class="form-text">your password must contain at least one lowercase, one uppercase, at least one digit and special character</small>
+        }     
+    }
+    <!-- <br><br> -->
+    <div class="form-group">
+        <label for="confirmPassID"></label>
+        <input type="password" class="form-control" id="confirmPass" formControlName="confirmPass" placeholder="Confirm Password">
+    </div>
+    @if(formControls['confirmPass'].invalid &&formControls['confirmPass'].touched){
+        @if(formControls['confirmPass'].hasError('required')){
+            <small class="form-text">Required</small>
+        }
+        @else if(formControls['confirmPass'].errors?.['passwordMismatch']){
+            <small class="form-text">Password do not match</small>
+        }   
+    }
+    <br><br>
+    <button type="submit" class="btn btn-primary">Register</button>
+    <!-- <br><br> -->
+    <div id="smallTXTdiv"><span id="smallTXT">Already have an account ? </span>
+    <span><a routerLink="/login">Login</a></span></div>
+</form>
+</div>
+</div>

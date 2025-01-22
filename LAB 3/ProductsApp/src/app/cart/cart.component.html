@@ -1,0 +1,39 @@
+<div id="shoppingCart">Shopping Cart</div>
+<br><br>
+<div id="rowDiv">
+    <div id="product">Product</div>
+    <div id="price">Price</div>
+    <div id="quantity">Quantity</div>
+    <div id="remove">Remove</div>
+</div>
+<br><hr>
+
+@for(item of addToCartService.getCartItems() ; track item.id){
+    <!-- TO AVOID DUPLICATE ITEMS IN THE CART PAGE -->
+    <div><img class="card-img-top" [src]="item.thumbnail" alt="Card image cap" id="thumbnailID"></div>
+    <div>{{item.title}}</div>
+    <!-- <div id="description">{{item.description}}</div> -->
+<div id="flexRow">
+    <p id="price2">{{item.price}}</p>
+    <p class="mx-5 mb-0">{{item.quantity}}</p>
+    <div class="d-flex align-items-center">
+        <button class="btn" (click)=" decreaseItemCounter(item);DecrementPricess(item.price)">-</button>
+        <p class="mx-5 mb-0">{{item.QuantityInCart}}</p>
+        <button class="btn" (click)="increaseItemCounter(item); addPricess(item.price)">+</button>
+    </div>
+    <button class="removeBtn" (click)="removeProduct(item)">X</button>
+</div>
+<br><hr>
+}
+<br><br><br><br>
+@if(counter == 0){
+    <div id="emptyCartTXT">Empty Cart ! Start Shopping with Us Now !</div>
+}
+@else{
+<div class="totalDiv">Items Selected: {{counter}}</div>
+<div class="totalDiv">Total: {{addToCartService.getTotalPrice()}} EGP</div>
+}
+
+
+
+

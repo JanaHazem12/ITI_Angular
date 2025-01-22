@@ -1,0 +1,42 @@
+<!-- <p>product-card works!</p> -->
+  <div class="card">
+  <div id="stockDiv" [ngClass]="productInfo.stock <= 5 ? 'outOfStock' :'inStock'">{{productInfo.availabilityStatus}}</div>
+  <!-- <a href="/product-details'"></a> -->
+    <img class="card-img-top" [src]="productInfo.thumbnail" alt="Card image cap" (click)="viewProduct(productInfo)">
+    <div id="properties">
+    <div id="priceSpan">{{ productInfo.price }} EGP
+    </div> 
+    <div id="cardTitleDiv"><h5 class="card-title">{{ productInfo.title }}</h5></div>
+      <div id="listDiv">
+      <ul class="card-text">
+        <!-- <li id="priceSpan"> -->
+        <!-- </li> -->
+        <!-- display the rating in stars BOOTSTRAP -->
+        <!-- <li>rating: -->
+            <span id="ratingSpan" class="fa fa-star">Rating {{productInfo.rating}}
+            <!-- @for(i of productInfo.rating ; track i.id){
+              <p>{{i}}😃</p>
+            } -->
+          </span>
+        <!-- </li> -->
+      </ul>
+    </div>
+      <!-- <button class="btn btn-primary me-3" (click)="handleRedirect(recipeItem.id)">View</button> -->
+      <!-- (click)="AddToCart(productInfo.id)" -->
+      <!-- (click)="addToCart(productInfo)" -->
+       <!-- @for(product of productInfo ; track product.id){ -->
+      <button id="cartbtn" class="btn btn-danger" (click)="increaseCounter(); addToCartt(productInfo); addPricess(productInfo.price); increaseCounterInCart(productInfo)">🛒</button>
+      <!-- } -->
+    </div>
+  </div>
+  
+
+  <!-- {"rating":2,"comment":"Not as described!",
+   "date":"2024-05-23T08:56:21.618Z",
+   "reviewerName":"Nolan Gonzalez",
+   "reviewerEmail":"nolan.gonzalez@x.dummyjson.com"},
+   {"rating":5,
+   "comment":"Very satisfied!","date":"2024-05-23T08:56:21.618Z","reviewerName":"Scarlett Wright","reviewerEmail":"scarlett.wright@x.dummyjson.com"}] -->
+
+
+   

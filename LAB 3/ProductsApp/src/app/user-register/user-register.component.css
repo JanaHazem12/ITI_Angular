@@ -1,0 +1,46 @@
+#registerTitle{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    padding-top: 30px;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    padding: 150px;
+    background-image: linear-gradient(rgb(245, 245, 245),rgba(33, 140, 38, 0.608));
+    min-height: 100vh; 
+}
+
+#innerForm{
+    border: 3px solid rgba(104, 104, 104, 0.247);
+    border-radius: 25px;
+    width: 500px;
+    margin: 0 auto;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.form-control{
+    height: 60px;
+}
+
+.form-group{
+    margin-bottom: 0px;
+    height: 100px;
+}
+
+button{
+    width: 426px;
+    height: 55px;
+}
+
+#smallTXTdiv{
+    text-align: center;
+    padding: 20px;
+}
+
+.form-text{
+    color: rgba(255, 0, 0, 0.584);
+}

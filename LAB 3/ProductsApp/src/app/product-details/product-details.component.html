@@ -1,0 +1,37 @@
+<!-- <div class="card"> -->
+  <div id="images">
+    <div><img class="card-img-top" [src]="productDetails.thumbnail" alt="product img" id="thumbnailID"></div>
+    <div id="imgdiv">
+      <div id="listDiv">
+        <ul class="card-text">
+          <h5 id="titleDiv">{{ productDetails.title }}</h5>
+          <span id="brandDiv">{{ productDetails.brand}}
+          </span> 
+          <br>
+          <span id="priceDiv">{{ productDetails.price }} EGP
+          </span> 
+          <br>
+          <span id="descDiv">{{ productDetails.description }}
+        </span> 
+        <br>
+      <span id="catDiv">Category: {{ productDetails.category }}
+      </span>
+        </ul>
+      </div>
+      <div id="smallImgLoop">
+      @for(image of productDetails.images ; track $index){
+        <img id="smallImg" class="card-img-top" [src]="image" alt="Card image cap">
+      }
+    </div>
+      <hr id="hrLine">
+      <div id="btDiv"><button id="button"  (click)="increaseCounterIcon(); addToCartt(productDetails);addPricess(productDetails.price);increaseCounterInCart(productDetails)">Add to Cart</button></div>
+      <!-- (click)="increaseCounter(); addToCartt(productInfo); addPricess(productInfo.price); increaseCounterInCart(productInfo) -->
+    <div id="lastTable">
+      <div id="delivery">Delivery by 🟢AllureCart</div>
+      <hr>
+      <div id="return">14-day right of return</div>
+    </div>
+    </div>
+<!-- </div> -->
+</div>
+
